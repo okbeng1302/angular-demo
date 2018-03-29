@@ -1,0 +1,44 @@
+<p>
+	{{hero.name}} works!!! Rank:{{hero.id}}
+</p>
+
+<div>
+	<label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+</div>
+
+<!-- *ngFor -->
+<h2>My Heroes</h2>
+<!--<ul class="heroes">
+	<li *ngFor="let item of heroes" 
+		[class.selected]="item === selectedHero"
+		 (click)="onSelect(item)">
+		<span class="badge">{{item.id}}</span> {{item.name}}
+	</li>
+</ul>-->
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
+
+<!-- *ngIf -->
+<!--<div *ngIf="selectedHero">
+
+  <h2>{{ selectedHero.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name">
+    </label>
+  </div>
+
+</div>-->
+	
+	<!-- 组件化 -->
+<!--<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+-->
