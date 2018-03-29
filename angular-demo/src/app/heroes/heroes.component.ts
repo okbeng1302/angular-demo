@@ -31,7 +31,7 @@ export class HeroesComponent implements OnInit {
 	 */
 	hero: Hero = {
 		id: 1,
-		name: "王晓滨"
+		name: "mike"
 	}
 
 	/*
